@@ -1,0 +1,94 @@
+lua/keymaps.lua:vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+lua/keymaps.lua:vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+lua/keymaps.lua:vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
+lua/keymaps.lua:vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
+lua/keymaps.lua:vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
+lua/keymaps.lua:vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+lua/keymaps.lua:  desc = 'Highlight when yanking (copying) text',
+lua/keymaps.lua:vim.keymap.set('n', '<leader>ca', ':ClangdAST<CR>', { noremap = true, silent = true, desc = '[c]langd [a]ST' })
+lua/keymaps.lua:vim.keymap.set('n', '<leader>ci', ':ClangdSymbolInfo<CR>', { noremap = true, silent = true, desc = '[s]ymbol [i]nfo' })
+lua/keymaps.lua:vim.keymap.set('n', '<leader>ct', ':ClangdTypeHierarchy<CR>', { noremap = true, silent = true, desc = '[t]ype [h]ierarchy' })
+lua/keymaps.lua:vim.keymap.set('n', '<leader>cm', ':ClangdMemoryUsage<CR>', { noremap = true, silent = true, desc = '[m]emory [u]sage' })
+lua/statusline.lua:    desc = 'Show diagnostic sign',
+lua/statusline.lua:    desc = 'Apply statusline highlights',
+lua/statusline.lua:    desc = 'Apply short statusline',
+lua/statusline.lua:    desc = 'Clear message area',
+lua/statusline.lua:    desc = 'Change statusline',
+lua/Abhinav/plugins/yanky.lua:      desc = 'Open Yank History',
+lua/Abhinav/plugins/yanky.lua:    { 'y', '<Plug>(YankyYank)', mode = { 'n', 'x' }, desc = 'Yank text' },
+lua/Abhinav/plugins/yanky.lua:    { 'p', '<Plug>(YankyPutAfter)', mode = { 'n', 'x' }, desc = 'Put yanked text after cursor' },
+lua/Abhinav/plugins/yanky.lua:    { 'P', '<Plug>(YankyPutBefore)', mode = { 'n', 'x' }, desc = 'Put yanked text before cursor' },
+lua/Abhinav/plugins/yanky.lua:    { 'gp', '<Plug>(YankyGPutAfter)', mode = { 'n', 'x' }, desc = 'Put yanked text after selection' },
+lua/Abhinav/plugins/yanky.lua:    { 'gP', '<Plug>(YankyGPutBefore)', mode = { 'n', 'x' }, desc = 'Put yanked text before selection' },
+lua/Abhinav/plugins/yanky.lua:    { '<c-p>', '<Plug>(YankyPreviousEntry)', desc = 'Select previous entry through yank history' },
+lua/Abhinav/plugins/yanky.lua:    { '<c-n>', '<Plug>(YankyNextEntry)', desc = 'Select next entry through yank history' },
+lua/Abhinav/plugins/yanky.lua:    { ']p', '<Plug>(YankyPutIndentAfterLinewise)', desc = 'Put indented after cursor (linewise)' },
+lua/Abhinav/plugins/yanky.lua:    { '[p', '<Plug>(YankyPutIndentBeforeLinewise)', desc = 'Put indented before cursor (linewise)' },
+lua/Abhinav/plugins/yanky.lua:    { ']P', '<Plug>(YankyPutIndentAfterLinewise)', desc = 'Put indented after cursor (linewise)' },
+lua/Abhinav/plugins/yanky.lua:    { '[P', '<Plug>(YankyPutIndentBeforeLinewise)', desc = 'Put indented before cursor (linewise)' },
+lua/Abhinav/plugins/yanky.lua:    { '>p', '<Plug>(YankyPutIndentAfterShiftRight)', desc = 'Put and indent right' },
+lua/Abhinav/plugins/yanky.lua:    { '<p', '<Plug>(YankyPutIndentAfterShiftLeft)', desc = 'Put and indent left' },
+lua/Abhinav/plugins/yanky.lua:    { '>P', '<Plug>(YankyPutIndentBeforeShiftRight)', desc = 'Put before and indent right' },
+lua/Abhinav/plugins/yanky.lua:    { '<P', '<Plug>(YankyPutIndentBeforeShiftLeft)', desc = 'Put before and indent left' },
+lua/Abhinav/plugins/yanky.lua:    { '=p', '<Plug>(YankyPutAfterFilter)', desc = 'Put after applying a filter' },
+lua/Abhinav/plugins/yanky.lua:    { '=P', '<Plug>(YankyPutBeforeFilter)', desc = 'Put before applying a filter' },
+lua/Abhinav/plugins/debug.lua:      { '<F5>', dap.continue, desc = 'Debug: Start/Continue' },
+lua/Abhinav/plugins/debug.lua:      { '<F1>', dap.step_into, desc = 'Debug: Step Into' },
+lua/Abhinav/plugins/debug.lua:      { '<F2>', dap.step_over, desc = 'Debug: Step Over' },
+lua/Abhinav/plugins/debug.lua:      { '<F3>', dap.step_out, desc = 'Debug: Step Out' },
+lua/Abhinav/plugins/debug.lua:      { '<leader>b', dap.toggle_breakpoint, desc = 'Debug: Toggle Breakpoint' },
+lua/Abhinav/plugins/debug.lua:        desc = 'Debug: Set Breakpoint',
+lua/Abhinav/plugins/debug.lua:      { '<F7>', dapui.toggle, desc = 'Debug: See last session result.' },
+lua/Abhinav/plugins/bufferline.lua:      { '[b', '<cmd>BufferLineCyclePrev<cr>', desc = 'Previous buffer' },
+lua/Abhinav/plugins/bufferline.lua:      { ']b', '<cmd>BufferLineCycleNext<cr>', desc = 'Next buffer' },
+lua/Abhinav/plugins/bufferline.lua:      { '<leader>bc', '<cmd>BufferLinePickClose<cr>', desc = 'Select a buffer to close' },
+lua/Abhinav/plugins/bufferline.lua:      { '<leader>bl', '<cmd>BufferLineCloseLeft<cr>', desc = 'Close buffers to the left' },
+lua/Abhinav/plugins/bufferline.lua:      { '<leader>bo', '<cmd>BufferLinePick<cr>', desc = 'Select a buffer to open' },
+lua/Abhinav/plugins/bufferline.lua:      { '<leader>br', '<cmd>BufferLineCloseRight<cr>', desc = 'Close buffers to the right' },
+lua/Abhinav/plugins/neo-tree.lua:    { '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
+lua/Abhinav/plugins/lspconfig.lua:          local map = function(keys, func, desc, mode)
+lua/Abhinav/plugins/lspconfig.lua:            vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
+lua/Abhinav/plugins/typewriter.lua:      desc = 'Toggle typewriter',
+lua/Abhinav/plugins/navbuddy.lua:    { '<leader>nv', '<cmd>Navbuddy<cr>', desc = 'Nav' },
+lua/Abhinav/plugins/trouble.lua:      desc = 'Diagnostics (Trouble)',
+lua/Abhinav/plugins/trouble.lua:      desc = 'Buffer Diagnostics (Trouble)',
+lua/Abhinav/plugins/trouble.lua:      desc = 'Symbols (Trouble)',
+lua/Abhinav/plugins/trouble.lua:      desc = 'LSP Definitions / references / ... (Trouble)',
+lua/Abhinav/plugins/trouble.lua:      desc = 'Location List (Trouble)',
+lua/Abhinav/plugins/trouble.lua:      desc = 'Quickfix List (Trouble)',
+lua/Abhinav/plugins/telescope.lua:      vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
+lua/Abhinav/plugins/telescope.lua:      vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
+lua/Abhinav/plugins/telescope.lua:      vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[S]earch [F]iles' })
+lua/Abhinav/plugins/telescope.lua:      vim.keymap.set('n', '<leader>ss', builtin.builtin, { desc = '[S]earch [S]elect Telescope' })
+lua/Abhinav/plugins/telescope.lua:      vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = '[S]earch current [W]ord' })
+lua/Abhinav/plugins/telescope.lua:      vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = '[S]earch by [G]rep' })
+lua/Abhinav/plugins/telescope.lua:      vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
+lua/Abhinav/plugins/telescope.lua:      vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
+lua/Abhinav/plugins/telescope.lua:      vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
+lua/Abhinav/plugins/telescope.lua:      vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
+lua/Abhinav/plugins/telescope.lua:      end, { desc = '[/] Fuzzily search in current buffer' })
+lua/Abhinav/plugins/telescope.lua:      end, { desc = '[S]earch [/] in Open Files' })
+lua/Abhinav/plugins/telescope.lua:      end, { desc = '[S]earch [N]eovim files' })
+lua/Abhinav/plugins/conform.lua:        desc = '[F]ormat buffer',
+lua/Abhinav/plugins/gitsigns.lua:        end, { desc = 'Jump to next git [c]hange' })
+lua/Abhinav/plugins/gitsigns.lua:        end, { desc = 'Jump to previous git [c]hange' })
+lua/Abhinav/plugins/gitsigns.lua:        end, { desc = 'stage git hunk' })
+lua/Abhinav/plugins/gitsigns.lua:        end, { desc = 'reset git hunk' })
+lua/Abhinav/plugins/gitsigns.lua:        map('n', '<leader>hs', gitsigns.stage_hunk, { desc = 'git [s]tage hunk' })
+lua/Abhinav/plugins/gitsigns.lua:        map('n', '<leader>hr', gitsigns.reset_hunk, { desc = 'git [r]eset hunk' })
+lua/Abhinav/plugins/gitsigns.lua:        map('n', '<leader>hS', gitsigns.stage_buffer, { desc = 'git [S]tage buffer' })
+lua/Abhinav/plugins/gitsigns.lua:        map('n', '<leader>hu', gitsigns.undo_stage_hunk, { desc = 'git [u]ndo stage hunk' })
+lua/Abhinav/plugins/gitsigns.lua:        map('n', '<leader>hR', gitsigns.reset_buffer, { desc = 'git [R]eset buffer' })
+lua/Abhinav/plugins/gitsigns.lua:        map('n', '<leader>hp', gitsigns.preview_hunk, { desc = 'git [p]review hunk' })
+lua/Abhinav/plugins/gitsigns.lua:        map('n', '<leader>hb', gitsigns.blame_line, { desc = 'git [b]lame line' })
+lua/Abhinav/plugins/gitsigns.lua:        map('n', '<leader>hd', gitsigns.diffthis, { desc = 'git [d]iff against index' })
+lua/Abhinav/plugins/gitsigns.lua:        end, { desc = 'git [D]iff against last commit' })
+lua/Abhinav/plugins/gitsigns.lua:        map('n', '<leader>tb', gitsigns.toggle_current_line_blame, { desc = '[T]oggle git show [b]lame line' })
+lua/Abhinav/plugins/gitsigns.lua:        map('n', '<leader>tD', gitsigns.toggle_deleted, { desc = '[T]oggle git show [D]eleted' })
+lua/Abhinav/plugins/flash.lua:    { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
+lua/Abhinav/plugins/flash.lua:    { "S", mode = { "n", "x", "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
+lua/Abhinav/plugins/flash.lua:    { "r", mode = "o", function() require("flash").remote() end, desc = "Remote Flash" },
+lua/Abhinav/plugins/flash.lua:    { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
+lua/Abhinav/plugins/flash.lua:    { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
+lua/Abhinav/plugins/toggleterm.lua:      desc = 'Toggle terminal',
+lua/Abhinav/plugins/toggleterm.lua:      desc = 'Kill terminal',
