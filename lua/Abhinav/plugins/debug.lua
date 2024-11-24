@@ -27,28 +27,28 @@ return {
   keys = {
     -- Basic debugging keymaps, feel free to change to your liking!
     {
-      '<F5>',
+      '<leader>dk',
       function()
         require('dap').continue()
       end,
       desc = 'Debug: Start/Continue',
     },
     {
-      '<F1>',
+      '<leader>dn',
       function()
         require('dap').step_into()
       end,
       desc = 'Debug: Step Into',
     },
     {
-      '<F2>',
+      '<leader>de',
       function()
         require('dap').step_over()
       end,
       desc = 'Debug: Step Over',
     },
     {
-      '<F3>',
+      '<leader>do',
       function()
         require('dap').step_out()
       end,
@@ -136,6 +136,23 @@ return {
     dap.listeners.before.event_terminated['dapui_config'] = dapui.close
     dap.listeners.before.event_exited['dapui_config'] = dapui.close
 
+    local ExecTypes = {
+      TEST = 'cargo build --tests -q --message-format=json',
+      BIN = 'cargo build -q --message-format=json',
+    }
+
+    local function runBuild(type)
+      local lines = vim.fn.systemlist(type)
+      local output = table.concat(lines, '\n')
+      local filename = output:match '^.*"executable":"(.*)",.*\n.*,"success":true}$'
+
+      if filename == nil then
+        return error 'failed to build cargo project'
+      end
+
+      return filename
+    end
+
     -- Install golang specific config
     require('dap-go').setup {
       delve = {
@@ -184,7 +201,7 @@ return {
         type = 'lldb',
         request = 'launch',
         program = function()
-          return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+          return runBuild(ExecTypes.BIN)
         end,
         cwd = '${workspaceFolder}',
         stopOnEntry = false,
