@@ -13,7 +13,7 @@ require('lazy').setup({
   --  require 'Abhinav.plugins.unison',
   --  require 'Abhinav.plugins.haskell',
   --  require 'Abhinav.plugins.inlay',
-  require 'Abhinav.plugins.blink',
+  --[[   require 'Abhinav.plugins.blink', ]]
   require 'Abhinav.plugins.godbolt',
   require 'Abhinav.plugins.navbuddy',
   --  require 'Abhinav.plugins.hlchunk',
